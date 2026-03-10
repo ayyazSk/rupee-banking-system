@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ayyaz.shaikh</groupId>
-	<artifactId>rupee-banking-system</artifactId>
+	<artifactId>rupee-banking-system-section1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>rupee-banking-system</name>
 	<description>Demo project for Spring Boot</description>
