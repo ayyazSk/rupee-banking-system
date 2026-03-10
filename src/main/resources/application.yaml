@@ -1,0 +1,35 @@
+spring:
+  security:
+    user:
+      name: ${SECURITY_USERNAME:testDev}
+      password: ${SECURITY_PASSWORD:123}
+  application:
+    name: springSecSection1
+
+  datasource:
+    url: jdbc:sqlite:/Users/ayyazshaikh/Library/DBeaverData/workspace6/.metadata/sample-database-sqlite-1/Chinook.db
+    driver-class-name: org.sqlite.JDBC
+    username:
+    password:
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none            # keep NONE with an existing DB
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+
+    # 👇 IMPORTANT: use standard naming (no snake_case)
+    naming:
+      implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+      physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+    properties:
+      hibernate:
+        format_sql: true
+        globally_quoted_identifiers: true   # optional but very helpful with case-sensitive names
+
+logging:
+  level:
+    org.springframework.security: TRACE
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
